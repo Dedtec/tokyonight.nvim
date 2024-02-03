@@ -5,33 +5,33 @@ local tokyonight = {}
 
 tokyonight.normal = {
   a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
+  b = { bg = colors.none, fg = colors.blue },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
 tokyonight.insert = {
   a = { bg = colors.green, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.green },
+  b = { bg = colors.none, fg = colors.green },
 }
 
 tokyonight.command = {
   a = { bg = colors.yellow, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.yellow },
+  b = { bg = colors.none, fg = colors.yellow },
 }
 
 tokyonight.visual = {
   a = { bg = colors.magenta, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.magenta },
+  b = { bg = colors.none, fg = colors.magenta },
 }
 
 tokyonight.replace = {
   a = { bg = colors.red, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.red },
+  b = { bg = colors.none, fg = colors.red },
 }
 
 tokyonight.terminal = {
   a = {bg = colors.green1, fg = colors.black },
-  b = {bg = colors.fg_gutter, fg=colors.green1 },
+  b = {bg = colors.none, fg=colors.green1 },
 }
 
 tokyonight.inactive = {

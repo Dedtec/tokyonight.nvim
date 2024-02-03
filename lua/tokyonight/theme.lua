@@ -84,7 +84,7 @@ function M.setup()
     StatusLineNC = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
     TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
-    TabLineSel = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
+    TabLineSel = { fg = c.orange }, -- tab pages line, active tab page label
     Title = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = c.bg_visual }, -- Visual mode selection
     VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -186,10 +186,10 @@ function M.setup()
     DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticUnnecessary = { fg = c.terminal_black }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-    DiagnosticVirtualTextError = { bg = util.darken(c.error, 0.1), fg = c.error }, -- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn = { bg = util.darken(c.warning, 0.1), fg = c.warning }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo = { bg = util.darken(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint = { bg = util.darken(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextError = { fg = c.error }, -- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn = {  fg = c.warning }, -- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo = { fg = c.info }, -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint = { fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
@@ -465,7 +465,7 @@ function M.setup()
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeWinSeparator = {
       fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
-      bg = c.bg_sidebar,
+      bg = c.none,
     },
     NvimTreeNormalNC = { fg = c.fg_sidebar, bg = c.bg_sidebar },
     NvimTreeRootFolder = { fg = c.blue, bold = true },
@@ -694,7 +694,7 @@ function M.setup()
     LazyProgressTodo = { bold = true, fg = c.fg_gutter },
 
     -- Notify
-    NotifyBackground = { fg = c.fg, bg = c.bg },
+    NotifyBackground = { fg = c.none, bg = c.bg },
     --- Border
     NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = options.transparent and c.none or c.bg },
     NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = options.transparent and c.none or c.bg },
@@ -719,6 +719,8 @@ function M.setup()
     NotifyINFOBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyDEBUGBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyTRACEBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+
+    MiniMapNormal = { fg = c.fg },
 
     -- Mini
     MiniCompletionActiveParameter = { underline = true },
